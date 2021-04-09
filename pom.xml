@@ -65,6 +65,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>springboot-keycloak</finalName>
     </build>
 
 </project>
