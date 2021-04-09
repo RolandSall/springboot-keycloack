@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    container_name: mongodb
+    restart: always
+    ports:
+      - 27017:27017
+
+  app:
+    container_name: springboot-service
+    image: rolandsall24/springboot-keycloak:1.0.0
+    build: ./
+    ports:
+      - "8080:8080"
+    links:
+      - mongo
+
